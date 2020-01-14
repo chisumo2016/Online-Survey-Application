@@ -10,4 +10,9 @@ class Questionnaire extends Model
     //Mass Assigment
     protected $guarded =[];
 
+    public  function  user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
