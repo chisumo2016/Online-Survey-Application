@@ -13,7 +13,8 @@
 
                             <div class="form-group">
                                 <label for="question">Question</label>
-                                <input type="text" name="question[question]" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Enter Text">
+                                <input type="text" name="question[question]" class="form-control" id="exampleInputText1"
+                                       value="{{ old('question.question') }}" aria-describedby="textHelp" placeholder="Enter Text">
                                 <small id="textHelp" class="form-text text-muted">Ask simple to the point questions for best result .</small>
 
                                 @error('question.question')
@@ -29,7 +30,8 @@
                                     <div>
                                         <div class="form-group">
                                             <label for="answer1">Choice 1</label>
-                                            <input type="text" name="answers[][answer]" class="form-control" id="answer1" aria-describedby="answer1Help" placeholder="Enter Choice 1">
+                                            <input type="text" name="answers[][answer]" class="form-control" id="answer1"
+                                                   value="{{ old('answers.0.answer') }}" aria-describedby="answer1Help" placeholder="Enter Choice 1">
                                             <small id="answer1Help" class="form-text text-muted">Giving a purpose will increase responses .</small>
 
                                             @error('answers.0.answer')
@@ -42,7 +44,8 @@
                                     <div>
                                         <div class="form-group">
                                             <label for="answer2">Choice 2</label>
-                                            <input type="text" name="answers[][answer]" class="form-control" id="answer2" aria-describedby="answer2Help" placeholder="Enter Choice 2">
+                                            <input type="text" name="answers[][answer]" class="form-control" id="answer2"
+                                                   value="{{ old('answers.1.answer') }}" aria-describedby="answer2Help" placeholder="Enter Choice 2">
                                             <small id="answer2Help" class="form-text text-muted">Giving a purpose will increase responses .</small>
 
                                             @error('answers.1.answer')
@@ -54,7 +57,8 @@
                                     <div>
                                         <div class="form-group">
                                             <label for="answer3">Choice 3</label>
-                                            <input type="text" name="answers[][answer]" class="form-control" id="answer3" aria-describedby="answer3Help" placeholder="Enter Choice 3">
+                                            <input type="text" name="answers[][answer]" class="form-control" id="answer3"
+                                                   value="{{ old('answers.2.answer') }}" aria-describedby="answer3Help" placeholder="Enter Choice 3">
                                             <small id="answer3Help" class="form-text text-muted">Giving a purpose will increase responses .</small>
 
                                             @error('answers.2.answer')
@@ -66,7 +70,8 @@
                                     <div>
                                         <div class="form-group">
                                             <label for="answer4">Choice 4</label>
-                                            <input type="text" name="answers[][answer]" class="form-control" id="answer4" aria-describedby="answer4Help" placeholder="Enter Choice 4">
+                                            <input type="text" name="answers[][answer]" class="form-control" id="answer4"
+                                                   value="{{ old('answers.3.answer') }}" aria-describedby="answer4Help" placeholder="Enter Choice 4">
                                             <small id="answer4Help" class="form-text text-muted">Giving a purpose will increase responses .</small>
 
                                             @error('answers.3.answer')
