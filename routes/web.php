@@ -18,6 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
 Route::get('/questionnaires/create', 'questionnaireController@create');
 Route::post('/questionnaires', 'questionnaireController@store');
 Route::get('/questionnaires/{questionnaire}', 'questionnaireController@show');
@@ -28,6 +30,7 @@ Route::post('/questionnaires/{questionnaire}/questions/', 'questionController@st
 
 
 Route::get('/surveys/{questionnaire}-{slug}','SurveryController@show');
+Route::post('/surveys/{questionnaire}-{slug}','SurveryController@store');
 
 
 
