@@ -16,7 +16,7 @@ class SurveryController extends Controller
          return view('survey.show',compact('questionnaire'));
     }
 
-    public  function  store()
+    public  function  store(Questionnaire $questionnaire)
     {
         //dd(request()->all());
 
@@ -25,6 +25,8 @@ class SurveryController extends Controller
             'responses.*.answer_id'     => 'required',
             'responses.*.question_id'   => 'required',
         ]);
+
+        $survey = $questionnaire->surveys()->create();
 
         dd(request()->all());
     }
