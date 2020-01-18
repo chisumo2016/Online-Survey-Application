@@ -28,8 +28,8 @@
                         </div>
 
                         <div class="card-footer">
-                            <form action="/questionnaires/{{$questionnaire->id}}/questions" method="POST">
-                                @method('DELTE')
+                            <form action="/questionnaires/{{$questionnaire->id}}/questions/{{ $question->id}}" method="post">
+                                @method('DELETE')
                                 @csrf
 
                                 <button class="btn btn-sm btn-outline-danger">Delete Question</button>
