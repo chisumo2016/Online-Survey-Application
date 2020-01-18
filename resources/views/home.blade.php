@@ -27,6 +27,15 @@
                             <li class="list-group-item">
                                 <a href="{{$questionnaire->path()}}">{{ $questionnaire->title }}</a>
 {{--                                <a href="/questionnaires/{{$questionnaire->id}}">{{ $questionnaire->title }}</a>--}}
+                                <div class="mt-2">
+                                    <small class="font-weight-bold">Share URL</small>
+                                    <P>
+                                        <a href="{{$questionnaire->publicPath()}}">
+                                            {{$questionnaire->publicPath()}}
+
+                                        </a>
+                                    </P>
+                                </div>
                             </li>
 
                         @endforeach
