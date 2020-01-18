@@ -22,10 +22,10 @@
                         <div class="card-body">
                             <ul class="list-group">
                                 @foreach($question->answers as $answer)
-                                    <li class="list-group-item">
+                                    <li class="list-group-item d-flex justify-content-between">
                                         <div>{{$answer->answer}}</div>
-                                        <div>{{$answer->responses->count()}}</div>
-                                        <div>{{$question->responses->count()}}</div>
+                                        <div>{{ intval(($answer->responses->count() * 100) / $question->responses->count() ) }} % </div>
+{{--                                        <div>{{$question->responses->count()}}</div>--}}
                                     </li>
                                 @endforeach
                             </ul>
