@@ -24,10 +24,16 @@ class SurveryController extends Controller
 
             'responses.*.answer_id'     => 'required',
             'responses.*.question_id'   => 'required',
+            'survey.name'               => 'required',
+            'survey.email'              => 'required|email',
+
         ]);
 
-        $survey = $questionnaire->surveys()->create();
+        $survey = $questionnaire->surveys()->create($data['survey']);
+        $survey->responses()->createMany($data['responses']);
 
-        dd(request()->all());
+        return 'Thank You';
+
+
     }
 }
