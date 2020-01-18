@@ -25,6 +25,7 @@
                                     <li class="list-group-item">
                                         <div>{{$answer->answer}}</div>
                                         <div>{{$answer->responses->count()}}</div>
+                                        <div>{{$question->responses->count()}}</div>
                                     </li>
                                 @endforeach
                             </ul>
