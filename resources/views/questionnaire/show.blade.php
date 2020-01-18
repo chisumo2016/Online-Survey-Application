@@ -22,7 +22,10 @@
                         <div class="card-body">
                             <ul class="list-group">
                                 @foreach($question->answers as $answer)
-                                    <li class="list-group-item">{{$answer->answer}}</li>
+                                    <li class="list-group-item">
+                                        <div>{{$answer->answer}}</div>
+                                        <div>{{$answer->responses->count()}}</div>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>
