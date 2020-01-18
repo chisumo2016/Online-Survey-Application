@@ -26,6 +26,15 @@
                                 @endforeach
                             </ul>
                         </div>
+
+                        <div class="card-footer">
+                            <form action="/questionnaires/{{$questionnaire->id}}/questions" method="POST">
+                                @method('DELTE')
+                                @csrf
+
+                                <button class="btn btn-sm btn-outline-danger">Delete Question</button>
+                            </form>
+                        </div>
                     </div>
 
                  @endforeach
